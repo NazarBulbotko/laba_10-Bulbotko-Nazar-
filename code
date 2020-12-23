@@ -1,0 +1,2560 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void cards(int w_1, int h_1, int mast, int nom)
+        {
+            int height = 14;
+            int width = 21;
+            for (int i = 1; i <= width; i++)
+            {
+                for (int j = 1; j <= height; j++)
+                {
+                    Console.SetCursorPosition((i + w_1), (j + h_1));
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("0");
+                }
+            }
+            Console.ResetColor();
+            if (mast == 1)
+            {
+                for (int d = 12; d < width; d++)
+                {
+                    for (int r = 6; r < height; r++)
+                    {
+                        if (r == 6 && (d == 15 || d == 16 || d == 17) || r == 7 && (d == 15 || d == 16 || d == 17) ||
+                            r == 8 && (d == 15 || d == 16 || d == 17) || r == 9 && (d == 12 || d == 13 || d == 14 ||
+                            d == 16 || d == 18 || d == 19 || d == 20) || r == 10 && (d == 12 || d == 13 || d == 14 ||
+                            d == 15 || d == 16 || d == 17 || d == 18 || d == 19 || d == 20) || r == 11 && (d == 12 ||
+                            d == 13 || d == 14 || d == 16 || d == 18 || d == 19 || d == 20) || r == 12 && d == 16 ||
+                            r == 13 && (d == 14 || d == 15 || d == 16 || d == 17 || d == 18))
+                        {
+                            Console.SetCursorPosition((w_1 + d), (h_1 + r));
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.Write("0");
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                }
+            }
+            if (mast == 2)
+            {
+                for (int f = 14; f < width; f++)
+                {
+                    for (int q = 7; q < height; q++)
+                    {
+                        if (q == 7 && f == 17 || q == 8 && (f == 16 || f == 17 || f == 18) || q == 9 && (f == 15 || f == 16 ||
+                            f == 17 || f == 18 || f == 19) || q == 10 && (f == 14 || f == 15 || f == 16 || f == 17 || f == 18 ||
+                            f == 19 || f == 20) || q == 11 && (f == 15 || f == 16 || f == 17 || f == 18 || f == 19) ||
+                            q == 12 && (f == 16 || f == 17 || f == 18) || q == 13 && f == 17)
+                        {
+                            Console.SetCursorPosition((w_1 + f), (h_1 + q));
+                            Console.BackgroundColor = ConsoleColor.Red;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.Write("0");
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                }
+            }
+            if (mast == 3)
+            {
+                for (int y = 14; y < width; y++)
+                {
+                    for (int u = 7; u < height; u++)
+                    {
+                        if (u == 7 && y == 17 || u == 8 && (y == 16 || y == 17 || y == 18) || u == 9 && (y == 15 || y == 16 ||
+                            y == 17 || y == 18 || y == 19) || u == 10 && (y == 14 || y == 15 || y == 16 || y == 17
+                            || y == 18 || y == 19 || y == 20) ||
+                            u == 11 && (y == 15 || y == 16 || y == 17 || y == 18 || y == 19) || u == 12 && y == 17 || u == 13 &&
+                            (y == 16 || y == 17 || y == 18))
+                        {
+                            Console.SetCursorPosition((w_1 + y), (h_1 + u));
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.Write("0");
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                }
+            }
+            if (mast == 4)
+            {
+                for (int t = 14; t < width; t++)
+                {
+                    for (int x = 9; x < height; x++)
+                    {
+                        if (x == 9 && (t == 14 || t == 15 || t == 16 || t == 18 || t == 19 || t == 20) || x == 10 &&
+                            (t == 14 || t == 15 || t == 16 || t == 17 || t == 18 || t == 19 || t == 20) || x == 11 &&
+                            (t == 14 || t == 15 || t == 16 || t == 17 || t == 18 || t == 19 || t == 20) || x == 12 &&
+                            (t == 16 || t == 17 || t == 18) || x == 13 && t == 17)
+                        {
+                            Console.SetCursorPosition((w_1 + t), (h_1 + x));
+                            Console.BackgroundColor = ConsoleColor.Red;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.Write("0");
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                }
+            }
+            if (nom == 2)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 2 || i == 3 || i == 4 || i == 5) || j == 3 && (i == 2 || i == 6) || j == 4 &&
+                            i == 6 || j == 5 && i == 5 || j == 6 && i == 4 || j == 7 && i == 3 || j == 8 && (i == 2 || i == 3 ||
+                            i == 4 || i == 5 || i == 6))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 3)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 2 || i == 3 || i == 4 || i == 5) || j == 3 && (i == 6 || i == 7) || j == 4 &&
+                            (i == 3 || i == 4 || i == 5) || j == 5 && (i == 6 || i == 7) || j == 6 && (i == 6 || i == 7) ||
+                            j == 7 && (i == 2 || i == 3 || i == 4 || i == 5))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 4)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 2 || i == 6) || j == 3 && (i == 2 || i == 6) || j == 4 && (i == 2 ||
+                            i == 3 || i == 4 || i == 5 || i == 6) || j == 5 && i == 6 || j == 6 && i == 6 ||
+                            j == 7 && i == 6)
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 5)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 2 || i == 3 || i == 4 || i == 5 || i == 6) || j == 3 && i == 2 ||
+                            j == 4 && (i == 2 || i == 3 || i == 4 || i == 5) || j == 5 && i == 6 ||
+                            j == 6 && i == 6 || j == 7 && (i == 2 || i == 3 || i == 4 || i == 5))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 6)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 3 || i == 4 || i == 5 || i == 6) || j == 3 && i == 2 ||
+                            j == 4 && (i == 2 || i == 3 || i == 4 || i == 5) || j == 5 && (i == 2 || i == 6) ||
+                            j == 6 && (i == 2 || i == 6) || j == 7 && (i == 2 || i == 3 || i == 4 || i == 5))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 7)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8) || j == 3 && i == 8 ||
+                            j == 4 && i == 7 || j == 5 && i == 6 || j == 6 && i == 5 || j == 7 && i == 4)
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 8)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 4 || i == 5) || j == 3 && (i == 3 || i == 6) || j == 4 && (i == 4 || i == 5) ||
+                            j == 5 && (i == 3 || i == 6) || j == 6 && (i == 2 || i == 7) || j == 7 && (i == 3 || i == 4 ||
+                            i == 5 || i == 6))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 9)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8)
+                            || j == 3 && (i == 2 || i == 8) || j == 4 && (i == 2 || i == 8) ||
+                            j == 5 && (i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8)
+                            || j == 6 && i == 8 || j == 7 && i == 8 || j == 8 && (i == 2 || i == 3 || i == 4 || i == 5
+                            || i == 6 || i == 7 || i == 8))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 10)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 2 || i == 5 || i == 6 || i == 7 || i == 8)
+                            || j == 3 && (i == 2 || i == 4 || i == 9) || j == 4 && (i == 2 || i == 4 || i == 9) ||
+                            j == 5 && (i == 2 || i == 4 || i == 9) || j == 6 && (i == 2 || i == 4 || i == 9) ||
+                            j == 7 && (i == 2 || i == 4 || i == 9) || j == 8 && (i == 2 || i == 5 || i == 6 || i == 7 || i == 8))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 11)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 4 || i == 5 || i == 6 || i == 7 || i == 8)
+                            || j == 3 && i == 6 || j == 4 && i == 6 || j == 5 && i == 6 || j == 6 && (i == 2 || i == 6)
+                            || j == 7 && (i == 2 || i == 6) || j == 8 && (i == 3 || i == 4 || i == 5))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 11)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 4 || i == 5 || i == 6 || i == 7 || i == 8)
+                            || j == 3 && i == 6 || j == 4 && i == 6 || j == 5 && i == 6 || j == 6 && (i == 2 || i == 6)
+                            || j == 7 && (i == 2 || i == 6) || j == 8 && (i == 3 || i == 4 || i == 5))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 12)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9)
+                            || j == 3 && (i == 2 || i == 3 || i == 10 || i == 11) || j == 4 && (i == 2 || i == 3 || i == 10 ||
+                            i == 11) || j == 5 && (i == 2 || i == 3 || i == 10 || i == 11) || j == 6 && (i == 2 || i == 3 ||
+                            i == 6 || i == 7 || i == 10 || i == 11) || j == 7 && (i == 2 || i == 3 || i == 8 || i == 9)
+                            || j == 8 && (i == 4 || i == 5 || i == 6 || i == 7 || i == 10 || i == 11))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 13)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 2 || i == 3 || i == 8 || i == 9)
+                            || j == 3 && (i == 2 || i == 3 || i == 8 || i == 9) || j == 4 && (i == 2 || i == 3 || i == 6
+                            || i == 7) || j == 5 && (i == 2 || i == 3 || i == 4 || i == 5) || j == 6 && (i == 2 || i == 3 ||
+                            i == 6 || i == 7) || j == 7 && (i == 2 || i == 3 || i == 8 || i == 9)
+                            || j == 8 && (i == 2 || i == 3 || i == 8 || i == 9))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+            if (nom == 14)
+            {
+                for (int i = 1; i < width; i++)
+                {
+                    for (int j = 1; j < height; j++)
+                    {
+                        if (j == 2 && (i == 4 || i == 5 || i == 6) || j == 3 && (i == 3 || i == 7) ||
+                            j == 4 && (i == 3 || i == 7) || j == 5 && (i == 3 || i == 4 ||
+                            i == 5 || i == 6 || i == 7) || j == 6 && (i == 3 || i == 7) || j == 7 && (i == 3 || i == 7))
+                        {
+                            Console.SetCursorPosition((w_1 + i), (h_1 + j));
+                            if (mast == 1 || mast == 3)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            Console.Write("0");
+                        }
+                    }
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.Title = "BlackJack";
+            Random rnd = new Random();
+            int mast = rnd.Next(1, 5);
+            int nom = rnd.Next(2, 15);
+            int dmast_1 = mast;
+            int dnom_1 = nom;
+            if (nom < 11)
+            {
+                dnom_1 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                dnom_1 = 10;
+            }
+            else
+            {
+                dnom_1 = 11;
+            }
+            cards(10, 1, mast, nom);
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int dmast_2 = mast;
+            int dnom_2 = nom;
+            if (nom < 11)
+            {
+                dnom_2 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                dnom_2 = 10;
+            }
+            else
+            {
+                dnom_2 = 11;
+            }
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int dmast_3 = mast;
+            int dnom_3 = nom;
+            if (nom < 11)
+            {
+                dnom_3 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                dnom_3 = 10;
+            }
+            else
+            {
+                dnom_3 = 11;
+            }
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int dmast_4 = mast;
+            int dnom_4 = nom;
+            if (nom < 11)
+            {
+                dnom_4 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                dnom_4 = 10;
+            }
+            else
+            {
+                dnom_4 = 11;
+            }
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int dmast_5 = mast;
+            int dnom_5 = nom;
+            if (nom < 11)
+            {
+                dnom_5 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                dnom_5 = 10;
+            }
+            else
+            {
+                dnom_5 = 11;
+            }
+            int height = 14;
+            int width = 21;
+            for (int i = 1; i <= width; i++)
+            {
+                for (int j = 1; j <= height; j++)
+                {
+                    int r = Math.Abs(j - i);
+                    if (r % 2 == 0)
+                    {
+                        Console.SetCursorPosition((i + 40), (j + 1));
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.Write("0");
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition((i + 40), (j + 1));
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+            Console.ResetColor();
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int pmast_1 = mast;
+            int pnom_1 = nom;
+            cards(10, 20, mast, nom);
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int pmast_2 = mast;
+            int pnom_2 = nom;
+            if (nom < 11)
+            {
+                pnom_2 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                pnom_2 = 10;
+            }
+            else
+            {
+                pnom_2 = 11;
+            }
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int pmast_3 = mast;
+            int pnom_3 = nom;
+            if (nom < 11)
+            {
+                pnom_3 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                pnom_3 = 10;
+            }
+            else
+            {
+                pnom_3 = 11;
+            }
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int pmast_4 = mast;
+            int pnom_4 = nom;
+            if (nom < 11)
+            {
+                pnom_4 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                pnom_4 = 10;
+            }
+            else
+            {
+                pnom_4 = 11;
+            }
+            mast = rnd.Next(1, 5);
+            nom = rnd.Next(2, 15);
+            int pmast_5 = mast;
+            int pnom_5 = nom;
+            if (nom < 11)
+            {
+                pnom_5 = nom;
+            }
+            else if (nom >= 11 && nom < 14)
+            {
+                pnom_5 = 10;
+            }
+            else
+            {
+                pnom_5 = 11;
+            }
+            cards(40, 20, mast, nom);
+            Console.ResetColor();
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.SetCursorPosition(1, 36 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(58, 36 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            for (int j = 2; j <= 57; j++)
+            {
+                Console.SetCursorPosition(j, 37);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(j, 46);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            Console.ResetColor();
+            int hh_1 = 38;
+            int hh_2 = 50;
+            s(2, hh_1);
+            t(11, hh_1);
+            a(20, hh_1);
+            n(33, hh_1);
+            d(48, hh_1);
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.SetCursorPosition(62, 36 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(83, 36 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            for (int j = 63; j <= 82; j++)
+            {
+                Console.SetCursorPosition(j, 37);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(j, 46);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            Console.ResetColor();
+            for (int i = 0; i <= 6; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((j == 1 || j == 2 || j == 3) && (i == 1 || i == 2) || (j == 4) && (i == 1 || i == 2 || i == 3
+                        || i == 4 || i == 5 || i == 6) || (j == 5 || j == 6) && (i == 1 || i == 2 || i == 5 || i == 6))
+                    {
+                        Console.SetCursorPosition(63 + i, hh_1 + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+            i(70, hh_1);
+            t(73, hh_1);
+            s(88, hh_1);
+            for (int i = 0; i <= 8; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if (j == 1 && (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6) || j == 2
+                                && (i == 1 || i == 2 || i == 7 || i == 8) || j == 3 && (i == 1 || i == 2 || i == 7 || i == 8)
+                                || j == 4 && (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6) ||
+                                j == 5 && (i == 1 || i == 2) || j == 6 && (i == 1 || i == 2))
+                    {
+                        Console.SetCursorPosition(97 + i, hh_1 + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+            l(106, hh_1);
+            i(109, hh_1);
+            t(112, hh_1);
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.SetCursorPosition(87, 36 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(122, 36 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            for (int j = 88; j <= 121; j++)
+            {
+                Console.SetCursorPosition(j, 37);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(j, 46);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            Console.ResetColor();
+            i(127, hh_1);
+            n(130, hh_1);
+            s(145, hh_1);
+            u(154, hh_1);
+            r(167, hh_1);
+            a(178, hh_1);
+            n(191, hh_1);
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((j == 1 || j == 6) && (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8)
+                        || (j == 2 || j == 5) && (i == 1 || i == 2 || i == 9 || i == 10) || (j == 3 || j == 4) &&
+                        (i == 1 || i == 2) || j == 1 && (i == 9 || i == 10))
+                    {
+                        Console.SetCursorPosition(206 + i, hh_1 + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+            e(217, hh_1);
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.SetCursorPosition(125, 36 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(229, 36 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            for (int j = 126; j <= 228; j++)
+            {
+                Console.SetCursorPosition(j, 37);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(j, 46);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            Console.ResetColor();
+            d(2, hh_2);
+            o(11, hh_2);
+            u(22, hh_2);
+            for (int i = 0; i <= 8; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((j == 1 || j == 2) && (i == 1 || i == 2) || (j == 3 || j == 6) && (i == 1 || i == 2 || i == 3 ||
+                        i == 4 || i == 5 || i == 6) || (j == 4 || j == 5) && (i == 1 || i == 2 || i == 7 || i == 8))
+                    {
+                        Console.SetCursorPosition(36 + i, hh_2 + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+            l(45, hh_2);
+            e(48, hh_2);
+            d(64, hh_2);
+            o(73, hh_2);
+            for (int i = 0; i <= 18; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((j == 1 || j == 2) && (i == 1 || i == 2 || i == 9 || i == 10 || i == 17 || i == 18)
+                        || (j == 3 || j == 4) && (i == 2 || i == 3 || i == 7 || i == 8 || i == 11 || i == 12 || i == 16 ||
+                        i == 17) || j == 3 && (i == 9 || i == 10) || j == 5 && (i == 3 || i == 4 || i == 6 || i == 7 ||
+                        i == 8 || i == 11 || i == 12 || i == 13 || i == 15 || i == 16) ||
+                        j == 6 && (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 12 || i == 13 ||
+                        i == 14 || i == 15 || i == 16))
+                    {
+                        Console.SetCursorPosition(84 + i, hh_2 + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+            n(103, hh_2);
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.SetCursorPosition(1, 48 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(119, 48 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            for (int j = 2; j <= 118; j++)
+            {
+                Console.SetCursorPosition(j, 49);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(j, 58);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            Console.ResetColor();
+            s(124, hh_2);
+            u(133, hh_2);
+            r(147, hh_2);
+            r(158, hh_2);
+            e(169, hh_2);
+            n(180, hh_2);
+            d(195, hh_2);
+            e(204, hh_2);
+            r(215, hh_2);
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.SetCursorPosition(123, 48 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(227, 48 + i);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            for (int j = 124; j <= 226; j++)
+            {
+                Console.SetCursorPosition(j, 49);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+                Console.SetCursorPosition(j, 58);
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("0");
+            }
+            Console.ResetColor();
+            Console.SetCursorPosition(240, 50);
+            Console.SetCursorPosition(90, 6);
+            int bank = 500;
+            int rate = 50;
+            Console.SetCursorPosition(80, 10);
+            Console.SetCursorPosition(80, 11);
+            Console.SetCursorPosition(80, 20);
+            int dc = 2;
+            int pc = 2;
+            int choicenum = 1;
+            int[] dnum = new int[] { dnom_1, dnom_2, dnom_3, dnom_4, dnom_5 };
+            int[] pnum = new int[] { pnom_1, pnom_2, pnom_3, pnom_4, pnom_5 };
+            int diller = dnum[0] + dnum[1];
+            int player = pnum[0] + pnum[1];
+            for (int i = 0; i <= 8; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((j == 1 || j == 2) && (i == 1 || i == 2) || (j == 3 || j == 6) && (i == 1 || i == 2 || i == 3 ||
+                        i == 4 || i == 5 || i == 6) || (j == 4 || j == 5) && (i == 1 || i == 2 || i == 7 || i == 8))
+                    {
+                        Console.SetCursorPosition(150 + i, 1 + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+            a(160, 1);
+            n(173, 1);
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 10; j++)
+                {
+                    if (j == 2 && (i == 2 || i == 3 || i == 8 || i == 9)
+                    || j == 3 && (i == 2 || i == 3 || i == 8 || i == 9) || j == 4 && (i == 2 || i == 3 || i == 6
+                    || i == 7) || j == 5 && (i == 2 || i == 3 || i == 4 || i == 5) || j == 6 && (i == 2 || i == 3 ||
+                    i == 6 || i == 7) || j == 7 && (i == 2 || i == 3 || i == 8 || i == 9)
+                    || j == 8 && (i == 2 || i == 3 || i == 8 || i == 9))
+                    {
+                        Console.SetCursorPosition(188 + i, j - 1);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+            num_5(210, -1);
+            num_0(220, -1);
+            num_0(230, -1);
+            r(150, 11);
+            a(161, 11);
+            t(174, 11);
+            e(183, 11);
+            num_5(220, 10);
+            num_0(230, 10);
+            Console.SetCursorPosition(150, 10);
+            while (Console.ReadKey().Key != ConsoleKey.Enter)
+            {
+                var choice = Console.ReadKey();
+                switch (choice.Key)
+                {
+                    case ConsoleKey.DownArrow:
+                        choicenum++;
+                        switch (choicenum)
+                        {
+                            case 2:
+                                for (int i = 3; i < 57; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 64; i < 82; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                            case 3:
+                                for (int i = 64; i < 82; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 89; i < 121; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                            case 4:
+                                for (int i = 89; i < 121; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 128; i < 228; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                            case 5:
+                                for (int i = 128; i < 228; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 3; i < 118; i++)
+                                {
+                                    Console.SetCursorPosition(i, 57);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                            case 6:
+                                for (int i = 3; i < 118; i++)
+                                {
+                                    Console.SetCursorPosition(i, 57);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 125; i < 220; i++)
+                                {
+                                    Console.SetCursorPosition(i, 57);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                        }
+                        break;
+                    case ConsoleKey.UpArrow:
+                        choicenum--;
+                        switch (choicenum)
+                        {
+                            case 1:
+                                for (int i = 64; i < 82; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 3; i < 57; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                            case 2:
+                                for (int i = 89; i < 121; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 64; i < 82; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                            case 3:
+                                for (int i = 128; i < 228; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 89; i < 121; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                            case 4:
+                                for (int i = 3; i < 118; i++)
+                                {
+                                    Console.SetCursorPosition(i, 57);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 128; i < 228; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                            case 5:
+                                for (int i = 125; i < 220; i++)
+                                {
+                                    Console.SetCursorPosition(i, 57);
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    Console.Write("0");
+                                }
+                                for (int i = 3; i < 118; i++)
+                                {
+                                    Console.SetCursorPosition(i, 57);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                Console.ResetColor();
+                                Console.SetCursorPosition(150, 10);
+                                break;
+                        }
+                        break;
+                    case ConsoleKey.Enter:
+                        break;
+                }
+            }
+            switch (choicenum)
+            {
+                case 1:
+                    for (int i = 10; i < 150; i++)
+                    {
+                        for (int j = 1; j <= 16; j++)
+                        {
+                            Console.SetCursorPosition(i, j);
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.Write("0");
+                        }
+                    }
+                    Console.ResetColor();
+                    for (int r = 0; r < dc; r++)
+                    {
+                        switch (r)
+                        {
+                            case 0:
+                                cards(10 + r * 30, 1, dmast_1, dnom_1);
+                                break;
+                            case 1:
+                                cards(10 + r * 30, 1, dmast_2, dnom_2);
+                                break;
+                            case 2:
+                                cards(10 + r * 30, 1, dmast_3, dnom_3);
+                                break;
+                            case 3:
+                                cards(10 + r * 30, 1, dmast_4, dnom_4);
+                                break;
+                            case 4:
+                                cards(10 + r * 30, 1, dmast_5, dnom_5);
+                                break;
+                        }
+                    }
+                    if (diller < 17)
+                    {
+                        while (diller < 17 && dc <= 4)
+                        {
+                            diller += dnum[dc];
+                            switch (dc)
+                            {
+                                case 2:
+                                    cards(70, 1, dmast_3, dnom_3);
+                                    break;
+                                case 3:
+                                    cards(100, 1, dmast_4, dnom_4);
+                                    break;
+                                case 4:
+                                    cards(130, 1, dmast_4, dnom_5);
+                                    break;
+                            }
+                            dc++;
+                        }
+                    }
+                    break;
+                case 2:
+
+                    switch (pc)
+                    {
+                        case 2:
+                            cards(70, 20, pmast_3, dnom_3);
+                            break;
+                        case 3:
+                            cards(100, 20, pmast_4, dnom_4);
+                            break;
+                        case 4:
+                            cards(130, 20, pmast_5, dnom_5);
+                            break;
+                    }
+                    player += pnum[pc];
+                    pc++;
+                    break;
+                case 5:
+                    for (int i = 0; i < 40; i++)
+                    {
+                        for (int j = 0; j < 10; j++)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.SetCursorPosition(i + 210, j + 1);
+                            Console.Write("0");
+                        }
+                    }
+                    for (int i = 0; i < 40; i++)
+                    {
+                        for (int j = 0; j < 10; j++)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.SetCursorPosition(i + 210, j + 10);
+                            Console.Write("0");
+                        }
+                    }
+                    Console.ResetColor();
+                    num_4(210, -1);
+                    num_5(220, -1);
+                    num_0(230, -1);
+                    num_1(210, 10);
+                    num_0(220, 10);
+                    num_0(230, 10);
+                    bank -= 50;
+                    rate += 50;
+                    switch (pc)
+                    {
+                        case 2:
+                            cards(70, 20, pmast_3, dnom_3);
+                            break;
+                        case 3:
+                            cards(100, 20, pmast_4, dnom_4);
+                            break;
+                        case 4:
+                            cards(130, 20, pmast_5, dnom_5);
+                            break;
+                    }
+                    player += pnum[pc];
+                    for (int i = 10; i < 150; i++)
+                    {
+                        for (int j = 1; j <= 16; j++)
+                        {
+                            Console.SetCursorPosition(i, j);
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.Write("0");
+                        }
+                    }
+                    Console.ResetColor();
+                    for (int r = 0; r < dc; r++)
+                    {
+                        switch (r)
+                        {
+                            case 0:
+                                cards(10 + r * 30, 1, dmast_1, dnom_1);
+                                break;
+                            case 1:
+                                cards(10 + r * 30, 1, dmast_2, dnom_2);
+                                break;
+                            case 2:
+                                cards(10 + r * 30, 1, dmast_3, dnom_3);
+                                break;
+                            case 3:
+                                cards(10 + r * 30, 1, dmast_4, dnom_4);
+                                break;
+                            case 4:
+                                cards(10 + r * 30, 1, dmast_5, dnom_5);
+                                break;
+                        }
+                    }
+                    if (diller < 17)
+                    {
+                        while (diller < 17 && dc <= 4)
+                        {
+                            diller += dnum[dc];
+                            switch (dc)
+                            {
+                                case 2:
+                                    cards(70, 1, dmast_3, dnom_3);
+                                    break;
+                                case 3:
+                                    cards(100, 1, dmast_4, dnom_4);
+                                    break;
+                                case 4:
+                                    cards(130, 1, dmast_4, dnom_5);
+                                    break;
+                            }
+                            dc++;
+                        }
+                    }
+                    break;
+                case 6:
+                    for (int i = 0; i < 40; i++)
+                    {
+                        for (int j = 0; j < 10; j++)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.SetCursorPosition(i + 210, j + 1);
+                            Console.Write("0");
+                        }
+                    }
+                    Console.ResetColor();
+                    num_4(210, -1);
+                    num_7(220, -1);
+                    num_5(230, -1);
+                    break;
+                default:
+                    break;
+            }
+            int choice_2 = choicenum;
+            int choice_3 = choicenum;
+            int choice_4 = choicenum;
+            if (pnum[0] == pnum[1] && dnum[0] != 14)
+            {
+                switch (choice_2)
+                {
+                    case 3:
+                        for (int i = 10; i < 150; i++)
+                        {
+                            for (int j = 20; j <= 35; j++)
+                            {
+                                Console.SetCursorPosition(i, j);
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                                Console.Write("0");
+                            }
+                        }
+                        Console.ResetColor();
+                        cards(10, 20, pmast_1, dnom_1);
+                        cards(90, 20, pmast_2, dnom_2);
+                        int player_1 = pnum[0];
+                        int choice_ch_1 = int.Parse(Console.ReadLine());
+                        switch (choice_ch_1)
+                        {
+                            case 2:
+                                cards(40, 20, pmast_3, pnom_3);
+                                player_1 += pnum[2];
+                                break;
+                            case 5:
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 1);
+                                        Console.Write("0");
+                                    }
+                                }
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 10);
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                num_4(210, -1);
+                                num_5(220, -1);
+                                num_0(230, -1);
+                                num_1(210, 10);
+                                num_0(220, 10);
+                                num_0(230, 10);
+                                bank -= 50;
+                                rate += 50;
+                                cards(40, 20, pmast_3, pnom_3);
+                                player_1 += pnum[2];
+                                for (int i = 10; i < 150; i++)
+                                {
+                                    for (int j = 1; j <= 16; j++)
+                                    {
+                                        Console.SetCursorPosition(i, j);
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                for (int r = 0; r < dc; r++)
+                                {
+                                    switch (r)
+                                    {
+                                        case 0:
+                                            cards(10 + r * 30, 1, dmast_1, dnom_1);
+                                            break;
+                                        case 1:
+                                            cards(10 + r * 30, 1, dmast_2, dnom_2);
+                                            break;
+                                        case 2:
+                                            cards(10 + r * 30, 1, dmast_3, dnom_3);
+                                            break;
+                                        case 3:
+                                            cards(10 + r * 30, 1, dmast_4, dnom_4);
+                                            break;
+                                        case 4:
+                                            cards(10 + r * 30, 1, dmast_5, dnom_5);
+                                            break;
+                                    }
+                                }
+                                if (diller < 17)
+                                {
+                                    while (diller < 17 && dc <= 4)
+                                    {
+                                        diller += dnum[dc];
+                                        switch (dc)
+                                        {
+                                            case 2:
+                                                cards(70, 1, dmast_3, dnom_3);
+                                                break;
+                                            case 3:
+                                                cards(100, 1, dmast_4, dnom_4);
+                                                break;
+                                            case 4:
+                                                cards(130, 1, dmast_4, dnom_5);
+                                                break;
+                                        }
+                                        dc++;
+                                    }
+                                }
+                                break;
+                        }
+                        int player_2 = pnum[1];
+                        int choice_ch_2 = int.Parse(Console.ReadLine());
+                        switch (choice_ch_2)
+                        {
+                            case 2:
+                                cards(120, 20, pmast_4, pnom_4);
+                                player_1 += pnum[3];
+                                break;
+                            case 5:
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 1);
+                                        Console.Write("0");
+                                    }
+                                }
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 10);
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                num_4(210, -1);
+                                num_5(220, -1);
+                                num_0(230, -1);
+                                num_1(210, 10);
+                                num_0(220, 10);
+                                num_0(230, 10);
+                                bank -= 50;
+                                rate += 50;
+                                cards(120, 20, pmast_4, pnom_4);
+                                player_2 += pnum[3];
+                                for (int i = 10; i < 150; i++)
+                                {
+                                    for (int j = 1; j <= 16; j++)
+                                    {
+                                        Console.SetCursorPosition(i, j);
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                for (int r = 0; r < dc; r++)
+                                {
+                                    switch (r)
+                                    {
+                                        case 0:
+                                            cards(10 + r * 30, 1, dmast_1, dnom_1);
+                                            break;
+                                        case 1:
+                                            cards(10 + r * 30, 1, dmast_2, dnom_2);
+                                            break;
+                                        case 2:
+                                            cards(10 + r * 30, 1, dmast_3, dnom_3);
+                                            break;
+                                        case 3:
+                                            cards(10 + r * 30, 1, dmast_4, dnom_4);
+                                            break;
+                                        case 4:
+                                            cards(10 + r * 30, 1, dmast_5, dnom_5);
+                                            break;
+                                    }
+                                }
+                                if (diller < 17)
+                                {
+                                    while (diller < 17 && dc <= 4)
+                                    {
+                                        diller += dnum[dc];
+                                        switch (dc)
+                                        {
+                                            case 2:
+                                                cards(70, 1, dmast_3, dnom_3);
+                                                break;
+                                            case 3:
+                                                cards(100, 1, dmast_4, dnom_4);
+                                                break;
+                                            case 4:
+                                                cards(130, 1, dmast_4, dnom_5);
+                                                break;
+                                        }
+                                        dc++;
+                                    }
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                }
+            }
+            else if (pnum[0] != pnum[1] && dnum[0] == 14)
+            {
+                switch (choice_3)
+                {
+                    case 4:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (pnum[0] == pnum[1] && dnum[0] == 14)
+            {
+                switch (choice_4)
+                {
+                    case 3:
+                        for (int i = 10; i < 150; i++)
+                        {
+                            for (int j = 20; j <= 35; j++)
+                            {
+                                Console.SetCursorPosition(i, j);
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Black;
+                                Console.Write("0");
+                            }
+                        }
+                        Console.ResetColor();
+                        cards(10, 20, pmast_1, dnom_1);
+                        cards(90, 20, pmast_2, dnom_2);
+                        int player_1 = pnum[0];
+                        int choice_ch_1 = int.Parse(Console.ReadLine());
+                        switch (choice_ch_1)
+                        {
+                            case 2:
+                                cards(40, 20, pmast_3, pnom_3);
+                                player_1 += pnum[2];
+                                break;
+                            case 5:
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 1);
+                                        Console.Write("0");
+                                    }
+                                }
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 10);
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                num_4(210, -1);
+                                num_5(220, -1);
+                                num_0(230, -1);
+                                num_1(210, 10);
+                                num_0(220, 10);
+                                num_0(230, 10);
+                                bank -= 50;
+                                rate += 50;
+                                cards(40, 20, pmast_3, pnom_3);
+                                player_1 += pnum[2];
+                                for (int i = 10; i < 150; i++)
+                                {
+                                    for (int j = 1; j <= 16; j++)
+                                    {
+                                        Console.SetCursorPosition(i, j);
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                for (int r = 0; r < dc; r++)
+                                {
+                                    switch (r)
+                                    {
+                                        case 0:
+                                            cards(10 + r * 30, 1, dmast_1, dnom_1);
+                                            break;
+                                        case 1:
+                                            cards(10 + r * 30, 1, dmast_2, dnom_2);
+                                            break;
+                                        case 2:
+                                            cards(10 + r * 30, 1, dmast_3, dnom_3);
+                                            break;
+                                        case 3:
+                                            cards(10 + r * 30, 1, dmast_4, dnom_4);
+                                            break;
+                                        case 4:
+                                            cards(10 + r * 30, 1, dmast_5, dnom_5);
+                                            break;
+                                    }
+                                }
+                                if (diller < 17)
+                                {
+                                    while (diller < 17 && dc <= 4)
+                                    {
+                                        diller += dnum[dc];
+                                        switch (dc)
+                                        {
+                                            case 2:
+                                                cards(70, 1, dmast_3, dnom_3);
+                                                break;
+                                            case 3:
+                                                cards(100, 1, dmast_4, dnom_4);
+                                                break;
+                                            case 4:
+                                                cards(130, 1, dmast_4, dnom_5);
+                                                break;
+                                        }
+                                        dc++;
+                                    }
+                                }
+                                break;
+                        }
+                        int player_2 = pnum[1];
+                        int choice_ch_2 = int.Parse(Console.ReadLine());
+                        switch (choice_ch_2)
+                        {
+                            case 2:
+                                cards(120, 20, pmast_4, pnom_4);
+                                player_1 += pnum[3];
+                                break;
+                            case 5:
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 1);
+                                        Console.Write("0");
+                                    }
+                                }
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 10);
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                num_4(210, -1);
+                                num_5(220, -1);
+                                num_0(230, -1);
+                                num_1(210, 10);
+                                num_0(220, 10);
+                                num_0(230, 10);
+                                bank -= 50;
+                                rate += 50;
+                                cards(120, 20, pmast_4, pnom_4);
+                                player_2 += pnum[3];
+                                for (int i = 10; i < 150; i++)
+                                {
+                                    for (int j = 1; j <= 16; j++)
+                                    {
+                                        Console.SetCursorPosition(i, j);
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                for (int r = 0; r < dc; r++)
+                                {
+                                    switch (r)
+                                    {
+                                        case 0:
+                                            cards(10 + r * 30, 1, dmast_1, dnom_1);
+                                            break;
+                                        case 1:
+                                            cards(10 + r * 30, 1, dmast_2, dnom_2);
+                                            break;
+                                        case 2:
+                                            cards(10 + r * 30, 1, dmast_3, dnom_3);
+                                            break;
+                                        case 3:
+                                            cards(10 + r * 30, 1, dmast_4, dnom_4);
+                                            break;
+                                        case 4:
+                                            cards(10 + r * 30, 1, dmast_5, dnom_5);
+                                            break;
+                                    }
+                                }
+                                if (diller < 17)
+                                {
+                                    while (diller < 17 && dc <= 4)
+                                    {
+                                        diller += dnum[dc];
+                                        switch (dc)
+                                        {
+                                            case 2:
+                                                cards(70, 1, dmast_3, dnom_3);
+                                                break;
+                                            case 3:
+                                                cards(100, 1, dmast_4, dnom_4);
+                                                break;
+                                            case 4:
+                                                cards(130, 1, dmast_4, dnom_5);
+                                                break;
+                                        }
+                                        dc++;
+                                    }
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    case 4:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            int choice_5 = choicenum;
+            if (player <= 21 && choicenum != 1 && choicenum != 5)
+            {
+                while (choice_5 != 1 && choice_5 != 5 && player <= 21)
+                {
+                    while (Console.ReadKey().Key != ConsoleKey.Enter)
+                    {
+                        var choice = Console.ReadKey();
+                        switch (choice.Key)
+                        {
+                            case ConsoleKey.DownArrow:
+                                choicenum++;
+                                switch (choicenum)
+                                {
+                                    case 2:
+                                        for (int i = 3; i < 57; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 64; i < 82; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                    case 3:
+                                        for (int i = 64; i < 82; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 89; i < 121; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                    case 4:
+                                        for (int i = 89; i < 121; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 128; i < 228; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                    case 5:
+                                        for (int i = 128; i < 228; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 3; i < 118; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 57);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                    case 6:
+                                        for (int i = 3; i < 118; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 57);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 125; i < 220; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 57);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                }
+                                break;
+                            case ConsoleKey.UpArrow:
+                                choicenum--;
+                                switch (choicenum)
+                                {
+                                    case 1:
+                                        for (int i = 64; i < 82; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 3; i < 57; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                    case 2:
+                                        for (int i = 89; i < 121; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 64; i < 82; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                    case 3:
+                                        for (int i = 128; i < 228; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 89; i < 121; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                    case 4:
+                                        for (int i = 3; i < 118; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 57);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 128; i < 228; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 45);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                    case 5:
+                                        for (int i = 125; i < 220; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 57);
+                                            Console.BackgroundColor = ConsoleColor.Black;
+                                            Console.ForegroundColor = ConsoleColor.Black;
+                                            Console.Write("0");
+                                        }
+                                        for (int i = 3; i < 118; i++)
+                                        {
+                                            Console.SetCursorPosition(i, 57);
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.Write("0");
+                                        }
+                                        Console.ResetColor();
+                                        Console.SetCursorPosition(150, 10);
+                                        break;
+                                }
+                                break;
+                            case ConsoleKey.Enter:
+                                break;
+                        }
+                    }
+                    {
+                        switch (choicenum)
+                        {
+                            case 1:
+                                for (int i = 3; i < 57; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                for (int i = 10; i < 150; i++)
+                                {
+                                    for (int j = 1; j <= 16; j++)
+                                    {
+                                        Console.SetCursorPosition(i, j);
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                for (int r = 0; r < dc; r++)
+                                {
+                                    switch (r)
+                                    {
+                                        case 0:
+                                            cards(10 + r * 30, 1, dmast_1, dnom_1);
+                                            break;
+                                        case 1:
+                                            cards(10 + r * 30, 1, dmast_2, dnom_2);
+                                            break;
+                                        case 2:
+                                            cards(10 + r * 30, 1, dmast_3, dnom_3);
+                                            break;
+                                        case 3:
+                                            cards(10 + r * 30, 1, dmast_4, dnom_4);
+                                            break;
+                                        case 4:
+                                            cards(10 + r * 30, 1, dmast_5, dnom_5);
+                                            break;
+                                    }
+                                }
+                                if (diller < 17)
+                                {
+                                    while (diller < 17 && dc <= 4)
+                                    {
+                                        diller += dnum[dc];
+                                        switch (dc)
+                                        {
+                                            case 2:
+                                                cards(70, 1, dmast_3, dnom_3);
+                                                break;
+                                            case 3:
+                                                cards(100, 1, dmast_4, dnom_4);
+                                                break;
+                                            case 4:
+                                                cards(130, 1, dmast_4, dnom_5);
+                                                break;
+                                        }
+                                        dc++;
+                                    }
+                                }
+                                break;
+                            case 2:
+                                for (int i = 64; i < 82; i++)
+                                {
+                                    Console.SetCursorPosition(i, 45);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.Write("0");
+                                }
+                                switch (pc)
+                                {
+                                    case 2:
+                                        cards(70, 20, pmast_3, dnom_3);
+                                        break;
+                                    case 3:
+                                        cards(100, 20, pmast_4, dnom_4);
+                                        break;
+                                    case 4:
+                                        cards(130, 20, pmast_5, dnom_5);
+                                        break;
+                                }
+                                player += pnum[pc];
+                                pc++;
+                                break;
+                            case 5:
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 1);
+                                        Console.Write("0");
+                                    }
+                                }
+                                for (int i = 0; i < 40; i++)
+                                {
+                                    for (int j = 0; j < 10; j++)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.SetCursorPosition(i + 210, j + 10);
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                num_4(210, -1);
+                                num_5(220, -1);
+                                num_0(230, -1);
+                                num_1(210, 10);
+                                num_0(220, 10);
+                                num_0(230, 10);
+                                bank -= 50;
+                                rate += 50;
+                                switch (pc)
+                                {
+                                    case 2:
+                                        cards(70, 20, pmast_3, dnom_3);
+                                        break;
+                                    case 3:
+                                        cards(100, 20, pmast_4, dnom_4);
+                                        break;
+                                    case 4:
+                                        cards(130, 20, pmast_5, dnom_5);
+                                        break;
+                                }
+                                player += pnum[pc];
+                                for (int i = 10; i < 150; i++)
+                                {
+                                    for (int j = 1; j <= 16; j++)
+                                    {
+                                        Console.SetCursorPosition(i, j);
+                                        Console.BackgroundColor = ConsoleColor.Black;
+                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        Console.Write("0");
+                                    }
+                                }
+                                Console.ResetColor();
+                                for (int r = 0; r < dc; r++)
+                                {
+                                    switch (r)
+                                    {
+                                        case 0:
+                                            cards(10 + r * 30, 1, dmast_1, dnom_1);
+                                            break;
+                                        case 1:
+                                            cards(10 + r * 30, 1, dmast_2, dnom_2);
+                                            break;
+                                        case 2:
+                                            cards(10 + r * 30, 1, dmast_3, dnom_3);
+                                            break;
+                                        case 3:
+                                            cards(10 + r * 30, 1, dmast_4, dnom_4);
+                                            break;
+                                        case 4:
+                                            cards(10 + r * 30, 1, dmast_5, dnom_5);
+                                            break;
+                                    }
+                                }
+                                if (diller < 17)
+                                {
+                                    while (diller < 17 && dc <= 4)
+                                    {
+                                        diller += dnum[dc];
+                                        switch (dc)
+                                        {
+                                            case 2:
+                                                cards(70, 1, dmast_3, dnom_3);
+                                                break;
+                                            case 3:
+                                                cards(100, 1, dmast_4, dnom_4);
+                                                break;
+                                            case 4:
+                                                cards(130, 1, dmast_4, dnom_5);
+                                                break;
+                                        }
+                                        dc++;
+                                    }
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            }
+            if (player > 21 || (player <= 21 && diller <= 21 && player <= diller))
+            {
+                for (int i = 0; i < 40; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.SetCursorPosition(i + 210, j + 10);
+                        Console.Write("0");
+                    }
+                }
+                Console.ResetColor();
+                num_0(230, 10);
+            }
+            else if (player <= 21 || player > diller && diller <= 21)
+            {
+                for (int i = 0; i < 40; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.SetCursorPosition(i + 210, j + 1);
+                        Console.Write("0");
+                    }
+                }
+                for (int i = 0; i < 40; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.SetCursorPosition(i + 210, j + 10);
+                        Console.Write("0");
+                    }
+                }
+                Console.ResetColor();
+                if (rate == 100)
+                {
+                    num_6(210, -1);
+                    num_5(220, -1);
+                    num_0(230, -1);
+                    num_0(230, 10);
+                }
+                else if (rate == 50)
+                {
+                    num_6(210, -1);
+                    num_0(220, -1);
+                    num_0(230, -1);
+                    num_0(230, 10);
+                }
+            }
+            Console.ReadKey();
+            }
+        static void s (int w_2, int h_2)
+        {
+            for (int i = 0; i <= 8; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if (j == 1 && (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8) || j == 2 &&
+                        (i == 1 || i == 2 || i == 7 || i == 8) || j == 3 && (i == 1 || i == 2 || i == 3 || i == 4) ||
+                        j == 4 && (i == 5 || i == 6 || i == 7 || i == 8) || j == 5 && (i == 1 || i == 2 || i == 7 || i == 8)
+                        || j == 6 && (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6))
+                    {
+                        Console.SetCursorPosition(w_2 + i, h_2 + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void t(int wt, int ht)
+        {
+            for (int i = 0; i <= 8; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((j == 1 || j == 3 || j == 4) && (i == 3 || i == 4) || j == 2 && (i == 1 || i == 2 || i == 3 ||
+                            i == 4 || i == 5 || i == 6) || j == 5 && (i == 3 || i == 4 || i == 7 || i == 8) || j == 6 &&
+                            (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8))
+                    {
+                        Console.SetCursorPosition(wt + i, ht + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void a(int wa, int ha)
+        {
+            for (int i = 0; i <= 12; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if (j == 1 && (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8) ||
+                            j == 2 && (i == 9 || i == 10) || j == 3 && (i == 3 || i == 4 || i == 5 || i == 6 || i == 7
+                            || i == 8 || i == 9 || i == 10) || (j == 4 || j == 5) && (i == 1 || i == 2 || i == 9 || i == 10) ||
+                           j == 6 && (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11
+                           || i == 12))
+                    {
+                        Console.SetCursorPosition(wa + i, ha + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void n(int wn, int hn)
+        {
+            for (int i = 0; i <= 14; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if (j == 1 && (i == 1 || i == 2 || i == 3 || i == 4 || i == 7 || i == 8 || i == 9 || i == 10 ||
+                            i == 11 || i == 12) || j == 2 && (i == 3 || i == 4 || i == 5 || i == 6 || i == 11 || i == 12)
+                            || (j == 3 || j == 4 || j == 5) && (i == 3 || i == 4 || i == 11 || i == 12) || j == 6 &&
+                            (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 11 || i == 12 || i == 13 || i == 14))
+                    {
+                        Console.SetCursorPosition(wn + i, hn + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void d(int wd, int hd)
+        {
+            for (int i = 0; i <= 14; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((j == 1 || j == 2) && (i == 7 || i == 8) || (j == 3 || j == 6) && (i == 1 || i == 2 || i == 3 ||
+                            i == 4 || i == 5 || i == 6 || i == 7 || i == 8) || (j == 4 || j == 5) && (i == 1 || i == 2 ||
+                            i == 7 || i == 8))
+                    {
+                        Console.SetCursorPosition(wd + i, hd + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void i(int wi, int hi)
+        {
+            for (int i = 0; i <= 2; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((i == 1 || i == 2) && (j == 1 || j == 3 || j == 4 || j == 5 || j == 6))
+                    {
+                        Console.SetCursorPosition(wi + i, hi + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void u(int wu, int hu)
+        {
+            for (int i = 0; i <= 14; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if (j == 1 && (i == 1 || i == 2 || i == 3 || i == 4 || i == 9 || i == 10 || i == 11 || i == 12) ||
+                            (j == 2 || j == 3 || j == 4 || j == 5) && (i == 3 || i == 4 || i == 11 || i == 12) || j == 6 &&
+                            (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 ||
+                            i == 12 || i == 13))
+                    {
+                        Console.SetCursorPosition(wu + i, hu + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void r(int wr, int hr)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((i == 1 || i == 2 || i == 7 || i == 8 || i == 9 || i == 10) && (j == 1) || (i == 3 || i == 4) &&
+                            (j == 1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 6) || (i == 5 || i == 6) && j == 2)
+                    {
+                        Console.SetCursorPosition(wr + i, hr + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void e(int we, int he)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if (j == 1 && (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8) || (j == 2 || j == 5) &&
+                            (i == 1 || i == 2 || i == 9 || i == 10) || j == 3 && (i == 1 || i == 2 || i == 3 || i == 4 ||
+                            i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10) || j == 4 && (i == 1 || i == 2) ||
+                            j == 6 && (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8))
+                    {
+                        Console.SetCursorPosition(we + i, he + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void l(int wl, int hl)
+        {
+            for (int i = 0; i <= 2; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((i == 1 || i == 2) && (j == 1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 6))
+                    {
+                        Console.SetCursorPosition(wl + i, hl + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void o(int wo, int ho)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    if ((i == 1 || i == 2 || i == 9 || i == 10) && (j == 2 || j == 3 || j == 4 || j == 5) ||
+                            (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8) && (j == 1 || j == 6))
+                    {
+                        Console.SetCursorPosition(wo + i, ho + j);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void num_5 (int w, int h)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 10; j++)
+                {
+                    if (j == 2 && (i == 2 || i == 3 || i == 4 || i == 5 || i == 6) || j == 3 && i == 2 ||
+                           j == 4 && (i == 2 || i == 3 || i == 4 || i == 5) || j == 5 && i == 6 ||
+                           j == 6 && i == 6 || j == 7 && (i == 2 || i == 3 || i == 4 || i == 5))
+                    {
+                        Console.SetCursorPosition(w + i, j + h);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void num_0 (int w, int h)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 10; j++)
+                {
+                    if ((i == 1 || i == 6) && (j == 3 || j == 4 || j == 5 || j == 6) || (i == 2 || i == 3 || i == 4 || i == 5)
+                        && (j == 2 || j == 7))
+                    {
+                        Console.SetCursorPosition(w + i, j + h);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void num_4 (int w, int h)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 10; j++)
+                {
+                    if (j == 2 && (i == 2 || i == 6) || j == 3 && (i == 2 || i == 6) || j == 4 && (i == 2 ||
+                      i == 3 || i == 4 || i == 5 || i == 6) || j == 5 && i == 6 || j == 6 && i == 6 ||
+                      j == 7 && i == 6)
+                    {
+                        Console.SetCursorPosition(w + i, j + h);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void num_7 (int w, int h)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 10; j++)
+                {
+                    if (j == 2 && (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8) || j == 3 && i == 8 ||
+                    j == 4 && i == 7 || j == 5 && i == 6 || j == 6 && i == 5 || j == 7 && i == 4)
+                    {
+                        Console.SetCursorPosition(w + i, j + h);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void num_1 (int w, int h)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 10; j++)
+                {
+                    if (i == 6 && (j == 2 || j == 3 || j == 4 || j == 5 || j == 6 || j == 7))
+                    {
+                        Console.SetCursorPosition(w + i, j + h);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+        static void num_6 (int w, int h)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 10; j++)
+                {
+                    if (j == 2 && (i == 3 || i == 4 || i == 5 || i == 6) || j == 3 && i == 2 ||
+              j == 4 && (i == 2 || i == 3 || i == 4 || i == 5) || j == 5 && (i == 2 || i == 6) ||
+              j == 6 && (i == 2 || i == 6) || j == 7 && (i == 2 || i == 3 || i == 4 || i == 5))
+                    {
+                        Console.SetCursorPosition(w + i, j + h);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("0");
+                    }
+                }
+            }
+        }
+    }
+    }
+                
